@@ -1,4 +1,4 @@
-﻿int x = new Random().Next(0,99);
+﻿int x = new Random().Next();
 Console.WriteLine($"сгенерировалось случайное число {x}");
 if (x <=99)
 {

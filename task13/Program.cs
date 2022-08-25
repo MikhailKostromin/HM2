@@ -1,34 +1,47 @@
 ﻿int x = new Random().Next();
 Console.WriteLine($"сгенерировалось случайное число {x}");
-if (x <=99)
-{
-    Console.WriteLine("Нет третьей цифры");
+
+void ThirdNumber (int x) 
+ {
+    int lenght = Convert.ToInt32(Math.Log10(x));
+    if (lenght>2)
+    {
+        int pow = Convert.ToInt32(Math.Pow(10, lenght));
+        int powDel = pow/100;
+        int numb = x / powDel;
+        int answer = numb % 10;
+        Console.WriteLine($"Третья цифра вашего числа: {answer}");
+    }
+    else
+    {
+        Console.WriteLine($"Нет третьей цифры в вашем числе: {x}");
+    }
 }
+ThirdNumber(x);
 
-else if (x>=100)
-if (x<=999)
-{
-Console.WriteLine (x=x%10);
-}
-
-while (x>999)
-{
-    x=x/10;
-}
-Console.WriteLine (x=x%10);
-
-
-
-// else if (x>=1000)
-// if (x <=9999)
+// if (x <=99)
 // {
-// Console.WriteLine (x=x/10 %10);
+//     Console.WriteLine("Нет третьей цифры");
 // }
 
-// else if (x>=10000)
-// if (x <=99999)
+// else if (x>=100)
+// if (x<=999)
 // {
-// Console.WriteLine (x=x/100 %10);
+// Console.WriteLine (x=x%10);
 // }
+
+// while (x>999)
+// {
+//     x=x/10;
+// }
+// Console.WriteLine (x=x%10);
+
+
+
+
+
+
+
+
 
 

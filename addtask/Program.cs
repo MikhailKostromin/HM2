@@ -1,24 +1,19 @@
-﻿int x = new Random().Next(0,1000);
-Console.WriteLine($"сгенерировалось случайное количество программистов {x}");
+﻿Console.WriteLine("Какое число программистов увидел робот");
+int x = Convert.ToInt32(Console.ReadLine());
 
-if (x % 10== 1)
+
+if (x % 10== 1 & x !=11 & x <100)
 {
      Console.WriteLine($"{x} программист");
 }
 
-if (x % 10 > 1)
+else if (x % 10 == 2 & x !=12 & x % 10 == 3 & x !=13 & x % 10 == 4 & x !=14 & x <100)
 {
-    if (x % 10 < 5)
-    {
-         Console.WriteLine($"{x} программиста");
-    }
+     Console.WriteLine($"{x} программиста");
 }
 
-if (x % 10 >= 5)
+else
 {
     Console.WriteLine($"{x} программистов"); 
 }
-if (x % 10 == 0)
-{
-    Console.WriteLine($"{x} программистов");
-}
+

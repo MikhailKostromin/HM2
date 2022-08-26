@@ -1,19 +1,45 @@
 ﻿Console.WriteLine("Какое число программистов увидел робот");
-int x = Convert.ToInt32(Console.ReadLine());
+int a=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Sum(a)); 
 
-
-if (x % 10== 1 & x !=11 & x <100)
-{
-     Console.WriteLine($"{x} программист");
+string Sum(int b)
+{ 
+string result; 
+if (b == 1 || b % 10 == 1 && b % 100 != 11)
+ { 
+result = "В зале " + a + " программист"; 
+} 
+else if ( b % 100 != 11 && b % 100 != 12 && b % 100 != 13 && b % 100 != 14 &&  b % 10 > 1 && b % 10 < 5 )
+{ 
+result = "В зале " + a + " программиста"; 
+} 
+else{ 
+result = "В зале " + a + " программистов"; 
+} 
+return result;
 }
 
-else if (x % 10 == 2 & x !=12 & x % 10 == 3 & x !=13 & x % 10 == 4 & x !=14 & x <100)
-{
-     Console.WriteLine($"{x} программиста");
-}
 
-else
-{
-    Console.WriteLine($"{x} программистов"); 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
